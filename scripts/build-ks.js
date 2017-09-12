@@ -16,7 +16,7 @@ function build(cb) {
   const env = process.env.NODE_ENV || 'development';
   const target = process.env.TARGET || 'universal';
   rollup({
-    entry: './kitchen-sink/app.js',
+    input: './kitchen-sink/app.js',
     plugins: [
       vue(),
       replace({
@@ -27,9 +27,9 @@ function build(cb) {
       buble(),
     ],
     format: 'umd',
-    moduleName: 'KS',
-    useStrict: true,
-    sourceMap: true,
+    name: 'KS',
+    strict: true,
+    sourcemap: true,
     banner,
   })
     .on('error', (err) => {

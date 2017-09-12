@@ -30,8 +30,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --content-base kitchen-sink/ --open --inline --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "dev": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production gulp build",
     "dist": "gulp dist"
   },
   "bugs": {
